@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background: linear-gradient(#111 , #222);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body::after{
+    content: '';
+    position: absolute;
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: circle(40% at right 70%);
+}
+.container{
+    background: rgba(255, 255, 255, 0.1);
+    height: 80%;
+    width: 80%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+    
+}
+nav .logo{
+    font-size: 40px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 3px;
+    position: relative;
+    right: -40px;
+    
+}
+ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 6px;
+    font-size:18px;
+    font-weight: 500;
+    position: relative;
+    right: 40px;
+
+}
+ul li a{
+    text-decoration: none;
+    color: aliceblue;
+}
+ul li a:hover{
+    color: red;
+    border-bottom: 2px solid red;
+}
+.content{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    position: relative;
+    top: 160px;
+}
+.content .text{
+   color: white;
+    width: 40%;
+}
+.content h2{
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+.content p{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    width: 80%;
+}
+.content .img{
+    width: 40%;
+}
+.content .img img{
+    width: 500px;
+}
+@media(min-width:950px) and (max-width:1150px){
+   .content .img img{
+    width: 350px;
+   }
+}
+@media (max-width:950px){
+    .logo , nav{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    nav{
+        margin-left:40px;
+    }
+    ul{
+        margin-left: 40px;
+    }
+    .logo{
+        margin-bottom: 20px;
+        margin-left: -100px;
+    }
+    body::after{
+        clip-path: circle(50% at bottom);
+    }
+    
+    .content .img img{
+        width: 350px;
+        position: relative;
+        top: 280px;
+        right: 150px;
+    }
+    .content .text{
+      width: 80%;  
+    }
+}
